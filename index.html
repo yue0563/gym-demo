@@ -40,6 +40,34 @@
             padding: 12px;
             border: 2px black solid;
         }
+
+        .slogan {
+            background-color: rgb(241, 78, 28);
+            font-size: 24px;
+        }
+
+        #bmi-table {
+            width: 660px;
+            height: 200px;
+            background-color: beige;
+            margin: 0 auto;
+        }
+
+        #bmi-table thead {
+            background-color: rgb(219, 88, 88);
+            color: white;
+        }
+
+        #bmi-table th {
+            font-size: 1rem;
+            font-weight: lighter;
+        }
+
+        #bmi-table tbody {
+            color: rgb(25, 175, 25);
+            font-size: 0.8rem;
+            text-align: left;
+        }
     </style>
 
 
@@ -58,7 +86,9 @@
         </p>
 
         <p><em>如果你對健身仍然保持著懷疑的態度，那你大可以去看看你喜歡的健身老戲骨幹，他們是如何做到年過50/60歲，依舊在
-                舞臺上或者是電影螢幕上綻放光彩。</em><u><b>答案就是堅持運動健身!</b></u>
+                舞臺上或者是電影螢幕上綻放光彩。</em><u><b>
+                    <span class="slogan">答案就是堅持運動健身!</span>
+                </b></u>
         </p>
     </div>
     <a href="">
@@ -112,7 +142,7 @@
     <hr>
     <div class="banner">一天所需卡路里</div>
 
-    <table border="1">
+    <table border="1" id="bmi-table">
         <thead>
             <tr>
                 <th>每天活動量</th>
@@ -157,7 +187,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <video width="100%" src="video/sample_video (720p).mp4" controls></video>
+        <!-- <video width="100%" src="video/sample_video (720p).mp4" controls></video> -->
     </div>
 
 
