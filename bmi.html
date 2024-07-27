@@ -10,7 +10,7 @@
     <style>
         form {
             background-color: rgb(154, 84, 219);
-            width: 300px;
+            width: 30%;
             margin: 0 auto;
             padding: 16px;
             color: rgb(0, 0, 0);
@@ -20,7 +20,7 @@
 
         input {
             margin: 6px 0;
-            width: 200px;
+            width: 70%;
         }
 
         button {
@@ -29,6 +29,24 @@
             width: 100px;
             padding: 3px;
             border-radius: 2px;
+        }
+
+        @media screen and (max-width:768px) {
+
+            form {
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width:368px) {
+
+            form {
+                width: 80%;
+            }
+
+            input {
+                width: 90%;
+            }
         }
     </style>
 
