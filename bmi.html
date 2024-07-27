@@ -5,13 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI計算機</title>
+    <link rel="stylesheet" href="res/style.css">
+
+    <style>
+        form {
+            background-color: rgb(154, 84, 219);
+            width: 300px;
+            margin: 0 auto;
+            padding: 16px;
+            color: rgb(0, 0, 0);
+            border: 2px rgb(136, 28, 28);
+            border-radius: 6px;
+        }
+
+        input {
+            margin: 6px 0;
+            width: 200px;
+        }
+
+        button {
+            background-color: blanchedalmond;
+            border: 0px;
+            width: 100px;
+            padding: 3px;
+            border-radius: 2px;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h1>BMI計算機</h1>
+    <div class="banner">BMI計算機</div>
     <form>
         <label for="username">姓名:</label>
         <input id="username" name="username" type="text" placeholder="tony"><br>
+
         <label for="password">密碼</label>
         <input id="password" name="password" type="password"><br>
 
@@ -20,11 +48,9 @@
 
         <label for="heigt">身高:</label>
         <input id="heigt" step="0.1" name="heigt" type="number" value="178.5"><br>
+
         <label for="weight">體重:</label>
         <input id="weight" step="0.1" name="weight" type="number" value="76.4"><br>
-
-
-
 
         <p>
             <button>計算</button>
@@ -32,7 +58,7 @@
 
 
     </form>
-    <button><a href="/">返回</a></button>
+    <a href="/">返回</a>
 </body>
 
 </html>

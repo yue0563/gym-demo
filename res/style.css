@@ -1,0 +1,62 @@
+body {
+    background-color: darkgrey;
+    font-family: "細明體";
+    font-size: 16px;
+    text-align: center;
+}
+
+.banner {
+    width: 200px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-family: "標楷體";
+    font-size: 28px;
+    margin: 12px;
+    padding: 6px 12px;
+}
+
+#title {
+    background-color: blanchedalmond;
+    color: blueviolet;
+    font-size: 4rem;
+    margin: 12px 24px;
+    margin-top: 64px;
+    padding: 12px;
+}
+
+#lab {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    background-color: rgb(219, 126, 204);
+    padding: 12px;
+    border: 2px black solid;
+}
+
+.slogan {
+    background-color: rgb(241, 78, 28);
+    font-size: 24px;
+}
+
+#bmi-table {
+    width: 660px;
+    height: 200px;
+    background-color: beige;
+    margin: 0 auto;
+}
+
+#bmi-table thead {
+    background-color: rgb(219, 88, 88);
+    color: white;
+}
+
+#bmi-table th {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+#bmi-table tbody {
+    color: rgb(25, 175, 25);
+    font-size: 0.8rem;
+    text-align: left;
+}
