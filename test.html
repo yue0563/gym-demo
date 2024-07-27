@@ -1,22 +1,67 @@
-<h1>川普一句話變禮物！台積電周增8萬股東進場撿鑽石</h1>
-<hr size="2">
-陳依旻｜Yahoo財經特派記者<br>
-更新時間： 2024年7月20日 週六 下午12:00<br>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo</title>
+</head>
+
+<body>
+    <h1>hello! JavaScript</h1>
 
 
-<p>
-    川普一句話，台積電（2330）股價連日跌，8萬多股民看到股價不到千元，進場「彎腰撿鑽石」，推升台積電最新股民數衝破133萬人，創逾一年新高。
-</p>
 
-<p>
-    <img src="https://s.yimg.com/ny/api/res/1.2/sDy93sI0pg2Y59LleAt7eQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYzMztjZj13ZWJw/https://media.zenfs.com/ko/newtalk.tw/36706c9b1c32b7de9757c33f1d4012bb"
-        alt="">
-</p>
 
-<a
-    href="https://tw.stock.yahoo.com/news/%E5%B7%9D%E6%99%AE%E4%B8%80%E5%8F%A5%E8%A9%B1%E8%AE%8A%E7%A6%AE%E7%89%A9%EF%BC%81%E5%8F%B0%E7%A9%8D%E9%9B%BB%E5%91%A8%E5%A2%9E8%E8%90%AC%E8%82%A1%E6%9D%B1%E9%80%B2%E5%A0%B4%E6%92%BF%E9%91%BD%E7%9F%B3-031358214.html">
-    來源出處</a>
 
-<br>
 
-<a href="https://www.youtube.com/watch?v=tux6Go0XKTo">youtube</a>
+
+
+
+
+    <script>
+        let x = 10;
+        let y = 20;
+        const PI = 3.1415926;
+        x = 20;
+        let z = x + y;
+        console.log(z);
+        console.log(x - y);
+
+        /**
+         * prompt => 提示輸入
+         * log    => 輸出
+         * 字串可以跟數值進行運算
+         * 使用let => 進行變數宣告林
+         * typeof => 觀察變數型態
+        */
+
+        //取得原面積邏輯
+        //let radius = prompt("請輸入半徑");
+        let radius = 5;
+        console.log(typeof (radius));
+        let area = radius ** 2 * PI;
+        const result = "半徑為:" + radius + " 園面積為:" + area;
+        console.log(result);
+        document.write(result);
+        alert(result);
+
+
+        //計算BMI
+        let name = prompt("請輸入姓名");
+        let high = prompt("請輸入身高");
+        let wight = prompt("請輸入體重");
+        let bmi = wight / (high / 100) ** 2;
+        console.log(name, high, wight, bmi);
+
+        document.write(`<h1>姓名:${name}</h1>`);
+        document.write(`<li>身高:${high}</li>`);
+        document.write(`<li>體重:${wight}</li>`);
+        document.write(`<li>BMI:${bmi.toFixed(2)}</li>`);
+
+        //document.write("<br>" + "姓名:" + name + "   BMI:" + bmi.toFixed(2));
+
+    </script>
+</body>
+
+</html>
