@@ -79,20 +79,50 @@
 
 
     <a href="/">返回</a>
+    <p id="result">BMI:</p>
+    <p id="comment">
 
+    </p>
     <script>
         function calcBMI() {
             //計算BMI
+            if (weightEl.value == "" || heigtEl.value == "") {
+                resultEl.innerHTML = `<h1 style="color:red">輸入不得為空!</h1>`;
+                return;
+            }
+
+
             let bmi = weightEl.value / (heigtEl.value / 100) ** 2;
-            alert(`BMI:${bmi.toFixed(2)}`)
+            // isNaN 提示輸入不正確
+            if (isNaN(bmi)) {
+                resultEl.innerHTML = "<h1>輸入不正確!</h1>";
+            } else {
+                resultEl.innerHTML = `<h1>BMI:${bmi.toFixed(2)}</h1>`;
+                //增加評語
+                let comment;
+                if (bmi <= 18.5) {
+                    comment = "體重過輕";
+                    color = "yellow"
+                } else if (bmi < 24) {
+                    comment = "健康體位";
+                    color = "black"
+                } else {
+                    comment = "體位異常";
+                    color = "red"
+                }
+                commentEl.innerHTML = `<h2 style="color:${color}">${comment}</h2>`;
+
+            }
         }
 
 
         let heigtEl = document.querySelector("#heigt");
         let weightEl = document.querySelector("#weight");
-        let buttonEL = document.querySelector("button");
+        let buttonEl = document.querySelector("button");
+        let resultEl = document.querySelector("#result");
+        let commentEl = document.querySelector("#comment");
 
-        console.log(buttonEL, heigtEl.value, weightEl.value);
+        console.log(resultEl, buttonEl, heigtEl.value, weightEl.value);
 
 
     </script>
