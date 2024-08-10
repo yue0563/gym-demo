@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="res/style.css">
 
     <style>
-        form {
+        #bmi-form {
             background-color: rgb(154, 84, 219);
             width: 30%;
             margin: 0 auto;
@@ -33,14 +33,14 @@
 
         @media screen and (max-width:768px) {
 
-            form {
+            #bmi-form {
                 width: 60%;
             }
         }
 
         @media screen and (max-width:368px) {
 
-            form {
+            #bmi-form {
                 width: 80%;
             }
 
@@ -54,7 +54,9 @@
 
 <body>
     <div class="banner">BMI計算機</div>
-    <form>
+
+    <div id="bmi-form">
+
         <label for="username">姓名:</label>
         <input id="username" name="username" type="text" placeholder="tony"><br>
 
@@ -69,14 +71,31 @@
 
         <label for="weight">體重:</label>
         <input id="weight" step="0.1" name="weight" type="number" value="76.4"><br>
+    </div>
+    <p>
+        <button onclick="calcBMI()">計算</button>
+    </p>
 
-        <p>
-            <button>計算</button>
-        </p>
 
 
-    </form>
     <a href="/">返回</a>
+
+    <script>
+        function calcBMI() {
+            //計算BMI
+            let bmi = weightEl.value / (heigtEl.value / 100) ** 2;
+            alert(`BMI:${bmi.toFixed(2)}`)
+        }
+
+
+        let heigtEl = document.querySelector("#heigt");
+        let weightEl = document.querySelector("#weight");
+        let buttonEL = document.querySelector("button");
+
+        console.log(buttonEL, heigtEl.value, weightEl.value);
+
+
+    </script>
 </body>
 
 </html>
