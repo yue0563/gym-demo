@@ -48,18 +48,66 @@
 
 
         //計算BMI
-        let name = prompt("請輸入姓名");
-        let high = prompt("請輸入身高");
-        let wight = prompt("請輸入體重");
-        let bmi = wight / (high / 100) ** 2;
-        console.log(name, high, wight, bmi);
+        // for i in rang(3):
+        //for (let i = 0; i < 3; i++) 
+        let count = 0;
+        let total = 0;
+        // 平均bmi
+        while (true) {
+            if (count == 3) { break; }
+            let name = prompt("請輸入姓名");
+            let high = prompt("請輸入身高");
+            let wight = prompt("請輸入體重");
 
-        document.write(`<h1>姓名:${name}</h1>`);
-        document.write(`<li>身高:${high}</li>`);
-        document.write(`<li>體重:${wight}</li>`);
-        document.write(`<li>BMI:${bmi.toFixed(2)}</li>`);
+            //身高/體重 輸入不能為空
+            // or => ||     and => &&
+            if (high == "" || wight == "") {
 
-        //document.write("<br>" + "姓名:" + name + "   BMI:" + bmi.toFixed(2));
+
+                alert("輸入不能為空");
+            } else {
+
+                // not => !
+                // 身高/體重  範圍1-500
+
+                if (!isValid(high, 1, 300) || !isValid(wight, 1, 500)) {
+                    alert("輸入數值不正確!(1~500)");
+                    continue;
+                }
+
+
+
+                let bmi = wight / (high / 100) ** 2;
+
+                console.log(name, high, wight, bmi, count);
+
+                if (isNaN(bmi)) {
+                    alert("輸入不正確");
+                } else {
+
+                    document.write(`<h1>姓名:${name}</h1>`);
+                    document.write(`<li>身高:${high}</li>`);
+                    document.write(`<li>體重:${wight}</li>`);
+                    document.write(`<li>BMI:${bmi.toFixed(2)}</li>`);
+                    count++;
+                    total += bmi
+                }
+            }
+            //count+=1
+
+        }
+        //平均bmi
+
+        document.write(`<h1>平均BMI:${(total / count).toFixed(2)}</h1>`);
+
+
+
+        // java
+        function isValid(value, start, end) {
+
+            return value >= start && value <= end;
+        }
+
 
     </script>
 </body>
